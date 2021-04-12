@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Mezzo } from '../driving.model'
 
 @Component({
@@ -9,12 +9,16 @@ import { Mezzo } from '../driving.model'
 
 export class DrivingListComponent implements OnInit {
 
-  listMezzi: Mezzo[]
+  @Input() listaMezzi: Mezzo[]
 
   constructor() {}
 
   ngOnInit(): void {
 
+  }
+
+  noleggia(mezzo) {
+    console.log(mezzo)
   }
 
 }

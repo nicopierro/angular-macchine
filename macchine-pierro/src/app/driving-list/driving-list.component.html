@@ -1,1 +1,11 @@
-<p>driving-list works!</p>
+<p>Lista Mezzi</p>
+
+<ul>
+  <li *ngFor='let mezzo of listaMezzi'>
+    tipo mezzo: {{mezzo.tipo}} <br>
+    tariffa mezzo: {{mezzo.tariffa}} <br>
+    valutazione media mezzo: {{mezzo.valutazionemedia}} <br>
+    <button>Noleggia</button>
+  </li>
+
+</ul>
