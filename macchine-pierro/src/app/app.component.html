@@ -1,4 +1,6 @@
 <h1> Autonoleggio mezzi automatici </h1>
-<app-driving-list [listaMezzi]="listaMezzi" [rented]="rented"></app-driving-list>
+<app-driving-list [listaMezzi]="listaMezzi" [rented]="rented" [rentedVector] = "rentedVector"></app-driving-list>
 
 <app-rented [rented]="rented"></app-rented>
+
+<app-rent-list [rentedVector] = "rentedVector"></app-rent-list>

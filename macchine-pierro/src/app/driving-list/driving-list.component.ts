@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Mezzo } from '../driving.model'
+import { Rent } from '../rent.model'
 
 @Component({
   selector: 'app-driving-list',
@@ -10,7 +11,10 @@ import { Mezzo } from '../driving.model'
 export class DrivingListComponent implements OnInit {
 
   @Input() listaMezzi: Mezzo[]
-  @Input() rented: Mezzo;
+  @Input() rented: Mezzo
+
+  @Input() rentedVector: Rent[]
+
 
   constructor() {}
 
@@ -23,6 +27,11 @@ export class DrivingListComponent implements OnInit {
     this.rented.tariffa = mezzo.tariffa
     this.rented.tipo = mezzo.tipo
     this.rented.valutazionemedia = mezzo.valutazionemedia
+
+    let r = new Rent()
+    r.numeroNoleggi = 1
+    r.mezzo = mezzo
+    this.rentedVector.push(r)
   }
 
 }
