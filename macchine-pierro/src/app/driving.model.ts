@@ -6,6 +6,6 @@ export class Mezzo {
   constructor (
     public tipo: string,
     public descrizione: string,
-    public tarrifa: string,
+    public tariffa: string,
     public valutazionemedia: string) {}
 }

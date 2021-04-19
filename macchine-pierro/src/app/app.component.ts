@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   obsMezzi : Observable<Mezzo[]>
   constructor(private http: HttpClient) {}
   listaMezzi: Mezzo[];
+  rented: Mezzo = new Mezzo("#","#","#", "#")
 
   ngOnInit(): void {
     this.obsMezzi = this.http.get<Mezzo[]>('https://my-json-server.typicode.com/malizia-g/fine_anno_exp/mezzi')
